@@ -12,34 +12,41 @@ Installation
 
 ### 1. Update your AppKernel file
 
-    # app/AppKernel.php
-    [...]
-    new CanalTP\NavitiaBundle\CanalTPNavitiaBundle(),
-    [...]
+```php
+# app/AppKernel.php
+[...]
+new CanalTP\NavitiaBundle\CanalTPNavitiaBundle(),
+[...]
+```
 
+### 2. Add "canaltp/navitia-bundle" in your composer.json file
 
-### 1. Add "canaltp/navitia-bundle" in your composer.json file
+```shell
+composer require "canaltp/navitia-bundle"
+```
 
-    composer require "canaltp/navitia-bundle"
+### 3. Add configuration in your config.yml
 
-### 2. Add configuration in your config.yml
+```yml
+# app/config.yml
+canal_tp_navitia:
+    configuration:
+        url: 'http://api.navitia.io'
+        token: YOUR_TOKEN
+        format: object
+```
 
-    # app/config.yml
-    canal_tp_navitia:
-        configuration:
-            url: 'http://api.navitia.io'
-            token: YOUR_TOKEN
-            format: object
+### 4. Do request
 
-### 3. Do request
-
-    $query = array(
-        'api' => 'coverage',
-        'parameters' => [
-            'region' => 'centre'
-        ]
-    );
-    $coverages = $this->get('canal_tp.navitia')->call($query);
+```php
+$query = array(
+    'api' => 'coverage',
+    'parameters' => [
+        'region' => 'centre'
+    ]
+);
+$coverages = $this->get('canal_tp.navitia')->call($query);
+```
 
 
 Suggest
@@ -49,24 +56,28 @@ You can use [Navitia Profiler](https://github.com/CanalTP/NavitiaProfilerBundle)
 
 ### 1. Update your AppKernel file
 
-    # app/AppKernel.php
-    [...]
-    new CanalTP\NavitiaProfilerBundle\NavitiaProfilerBundle(),
-    [...]
+```php
+# app/AppKernel.php
+[...]
+new CanalTP\NavitiaProfilerBundle\NavitiaProfilerBundle(),
+[...]
+```
 
 
 ### 2. Add "canaltp/navitia-profiler-bundle" in your composer.json file
 
-    composer require "canaltp/navitia-profiler-bundle"
+```shell
+composer require "canaltp/navitia-profiler-bundle"
+```
 
 ### 3. Overload your config
 
-    canal_tp.navitia:
-      [...]
-      arguments: ['@navitia_profiler']
-      [...]
-
-
+```yml
+canal_tp.navitia:
+  [...]
+  arguments: ['@navitia_profiler']
+  [...]
+```
 
 Contributing
 ------------
