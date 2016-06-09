@@ -30,6 +30,7 @@ class Configuration implements ConfigurationInterface
                         ->isRequired()
                     ->end()
                     ->scalarNode('format')
+                        ->info('This value accepts: json or object.')
                         ->defaultValue('object')
                     ->end()
                     ->scalarNode('token')
