@@ -10,12 +10,21 @@ Requirements
 Installation
 -------------
 
+### 1. Update your AppKernel file
+
+    # app/AppKernel.php
+    [...]
+    new CanalTP\NavitiaBundle\CanalTPNavitiaBundle(),
+    [...]
+
+
 ### 1. Add "canaltp/navitia-bundle" in your composer.json file
 
     composer require "canaltp/navitia-bundle"
 
 ### 2. Add configuration in your config.yml
 
+    # app/config.yml
     canal_tp_navitia:
         configuration:
             url: 'http://api.navitia.io'
@@ -32,8 +41,35 @@ Installation
     );
     $coverages = $this->get('canal_tp.navitia')->call($query);
 
+
+Suggest
+-------
+
+You can use [Navitia Profiler](https://github.com/CanalTP/NavitiaProfilerBundle) to see all request in your profiler.
+
+### 1. Update your AppKernel file
+
+    # app/AppKernel.php
+    [...]
+    new CanalTP\NavitiaProfilerBundle\NavitiaProfilerBundle(),
+    [...]
+
+
+### 2. Add "canaltp/navitia-profiler-bundle" in your composer.json file
+
+    composer require "canaltp/navitia-profiler-bundle"
+
+### 3. Overload your config
+
+    canal_tp.navitia:
+      [...]
+      arguments: ['@navitia_profiler']
+      [...]
+
+
+
 Contributing
--------------
+------------
 
 1. Rémy Abi-khalil <https://github.com/netmisa>
 2. Julien Maulny <https://github.com/alcalyn>

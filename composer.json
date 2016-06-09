@@ -32,7 +32,9 @@
         }
     ],
     "require": {
-        "canaltp/navitia": "1.2.*",
+        "canaltp/navitia": "1.2.*"
+    },
+    "suggest": {
         "canaltp/navitia-profiler-bundle": "^0.0.2"
     },
     "autoload": {
