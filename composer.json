@@ -1,0 +1,41 @@
+{
+    "name": "canaltp/navitia-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony NavitiaBundle",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Julien Maulny",
+            "email": "julien.maulny@canaltp.fr"
+        },
+        {
+            "name": "Ludovic Roche",
+            "email": "ludovic.roche@canaltp.fr"
+        },
+        {
+            "name": "Rémy Abi Khalil",
+            "email": "remy.abikhalil@canaltp.fr"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Julien Maulny",
+            "email": "julien.maulny@canaltp.fr"
+        },
+        {
+            "name": "Ludovic Roche",
+            "email": "ludovic.roche@canaltp.fr"
+        },
+        {
+            "name": "Rémy Abi Khalil",
+            "email": "remy.abikhalil@canaltp.fr"
+        }
+    ],
+    "require": {
+        "canaltp/navitia": "1.2.*",
+        "canaltp/navitia-profiler-bundle": "^0.0.2"
+    },
+    "autoload": {
+        "psr-4": { "CanalTP\\NavitiaBundle\\": "" }
+    }
+}
