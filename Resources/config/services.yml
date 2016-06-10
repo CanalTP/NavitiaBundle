@@ -1,0 +1,10 @@
+services:
+    psr.log.null:
+      class: Psr\Log\NullLogger
+
+    canal_tp.navitia:
+      class: Navitia\Component\Service\ServiceFacade
+      factory: [Navitia\Component\Service\ServiceFacade, getInstance]
+      arguments: ['@psr.log.null']
+      calls:
+          - [ setConfiguration, ['%canaltp.navitia.config%']]
