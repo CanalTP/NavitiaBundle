@@ -85,3 +85,8 @@ Contributing
 1. Rémy Abi-khalil <https://github.com/netmisa>
 2. Julien Maulny <https://github.com/alcalyn>
 3. Ludovic Roche <https://github.com/lrocheWB>
+
+License
+-------
+
+The library is under [MIT](LICENSE.md).
