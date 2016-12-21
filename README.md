@@ -89,4 +89,4 @@ Contributing
 License
 -------
 
-The library is under [MIT](LICENSE.md).
+The library is under [MIT](LICENSE).
